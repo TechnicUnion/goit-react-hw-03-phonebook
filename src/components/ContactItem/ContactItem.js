@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import css from './ContactItem.module.css';
 
 const ContactItem = ({ item, onDeleteClick }) => (
-  <li className={css.contactItem} key={item.id}>
+  <div className={css.contactItem}>
     {item.name}: <span>{item.number}</span>
     <button
       className={css.button}
@@ -12,7 +12,7 @@ const ContactItem = ({ item, onDeleteClick }) => (
     >
       Delete
     </button>
-  </li>
+  </div>
 );
 
 export default ContactItem;

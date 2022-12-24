@@ -5,7 +5,9 @@ import ContactItem from 'components/ContactItem/ContactItem.js';
 const ContactList = ({ itemList, onDeleteClick }) => (
   <ul>
     {itemList.map(item => (
-      <ContactItem item={item} onDeleteClick={onDeleteClick} />
+      <li key={item.id}>
+        <ContactItem item={item} onDeleteClick={onDeleteClick} />
+      </li>
     ))}
   </ul>
 );
